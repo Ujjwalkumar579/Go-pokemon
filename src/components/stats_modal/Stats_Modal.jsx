@@ -33,7 +33,7 @@ const Stats_Modal = (props) => {
     async function getStats() {
       let resp = await fetch(props.url_info);
       let data = await resp.json();
-      console.log(data);
+      // console.log(data);
       setStats({
         ...stats,
         name: data.name,
@@ -65,9 +65,9 @@ const Stats_Modal = (props) => {
       });
     }
     getStats();
-  }, [props.text_for_search]);
+  }, []);
 
-  console.log(stats);
+  // console.log(stats);
 
   return (
     <div>
@@ -150,8 +150,8 @@ const Stats_Modal = (props) => {
                   <div className="abilities">
                     <h4>Abilities</h4>
                     <ul>
-                      {stats.abilities.map((val) => {
-                        return <li>{val}</li>;
+                      {stats.abilities.map((val, i) => {
+                        return <li key={i}>{val}</li>;
                       })}
                     </ul>
                   </div>

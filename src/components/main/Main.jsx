@@ -37,7 +37,7 @@ function Main() {
         `https://pokeapi.co/api/v2/type/${e.target.value}/`
       );
       let data = await resp.json();
-      console.log(data.pokemon);
+      // console.log(data.pokemon);
       setShowByType(data.pokemon);
     }
     apiCallForSortByType();
@@ -46,7 +46,7 @@ function Main() {
   const searchHandle = (e) => {
     setText_for_search(e.target.value);
   };
-  console.log(pokemon_data);
+  // console.log(pokemon_data);
 
   return (
     <div className="Main pb-5">
