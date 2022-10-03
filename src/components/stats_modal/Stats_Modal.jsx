@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Stats_Modal.css";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import pokemonLogo from "../../img/pokemon-logo.png";
 import pokeBall from "../../img/pokeball.png";
@@ -65,6 +64,7 @@ const Stats_Modal = (props) => {
       });
     }
     getStats();
+    // eslint-disable-next-line
   }, []);
 
   // console.log(stats);
@@ -200,9 +200,6 @@ const Stats_Modal = (props) => {
               </div>
             </div>
           </Modal.Body>
-          {/* <Modal.Footer>
-            <Button onClick={props.onHide}>Close</Button>
-          </Modal.Footer> */}
         </div>
       </Modal>
     </div>

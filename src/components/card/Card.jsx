@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useEffect, useState } from "react";
 import { MdOutlineCatchingPokemon } from "react-icons/md";
 import Stats_Modal from "../stats_modal/Stats_Modal";
@@ -29,8 +30,8 @@ const Card = ({ name, id, url_info, text_for_search }) => {
       });
     }
     fetchData();
-  }, [id]);
-
+    // eslint-disable-next-line
+  }, []);
   let card_bg_color_img = "";
   let card_bg_color = "";
 
